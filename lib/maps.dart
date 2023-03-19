@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
@@ -63,7 +61,7 @@ class _MapScreenState extends State<MapScreen> {
           ),
 
           Padding(
-            padding: EdgeInsets.only(top: 60, left: 20, right: 20),
+            padding: EdgeInsets.only(top: 30, left: 20, right: 20),
             child: TextField(
               //controller: _searchController,
               decoration: InputDecoration(
