@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
@@ -20,19 +22,6 @@ class _MapScreenState extends State<MapScreen> {
   );
   LatLng currentLocation = _initialCameraPosition.target;
   var myMarker = HashSet<Marker>();
-  late BitmapDescriptor markerbitmap;
-  getmarkerbitmap() async {
-    markerbitmap = await BitmapDescriptor.fromAssetImage(
-      ImageConfiguration.empty,
-      "assets/image/arrow_location.png",
-    );
-  }
-
-  oninit() {
-    setState(() {
-      getmarkerbitmap();
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +41,6 @@ class _MapScreenState extends State<MapScreen> {
                     infoWindow: InfoWindow(
                         title: "Your Location",
                         snippet: "This is your Location Now "),
-                    icon: markerbitmap,
                   ),
                 );
               });
